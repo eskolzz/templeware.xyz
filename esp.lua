@@ -1,5 +1,4 @@
 -- esp.lua
---// Variables
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local localPlayer = Players.LocalPlayer
@@ -23,7 +22,7 @@ local bones = {
     {"RightLowerLeg", "RightFoot"}
 }
 
---// Settings
+--// note: makey sure when you are changing the settings you do ESP_SETTINGS.(setting)
 local ESP_SETTINGS = {
     BoxOutlineColor = Color3.new(0, 0, 0),
     BoxColor = Color3.new(1, 1, 1),
@@ -156,7 +155,9 @@ local function updateEsp()
                     local charSize = (camera:WorldToViewportPoint(rootPart.Position - Vector3.new(0, 3, 0)).Y - camera:WorldToViewportPoint(rootPart.Position + Vector3.new(0, 2.6, 0)).Y) / 2
                     local boxSize = Vector2.new(math.floor(charSize * 1.4), math.floor(charSize * 1.9))
                     local boxPosition = Vector2.new(math.floor(hrp2D.X - charSize * 1.4 / 2), math.floor(hrp2D.Y - charSize * 1.6 / 2))
-
+                    
+                    --[[ yes yes i know i can just wrap this entire thing in an if ESP_SETTINGS.Enabled then but i already did it and it works so idgaf ]]--
+                    
                     if ESP_SETTINGS.ShowName and ESP_SETTINGS.Enabled then
                         esp.name.Visible = true
                         esp.name.Text = string.lower(player.Name)
@@ -293,6 +294,8 @@ local function updateEsp()
                         esp.distance.Visible = false
                     end             
 
+                    --[[ tracers are buggy and broken rn just dont use em :pray: ]]--
+                    
                     if ESP_SETTINGS.ShowTracer and ESP_SETTINGS.Enabled then
                         local tracerY
                         if ESP_SETTINGS.TracerPosition == "Top" then
@@ -361,4 +364,9 @@ Players.PlayerRemoving:Connect(function(player)
 end)
 
 RunService.RenderStepped:Connect(updateEsp)
-return ESP_SETTINGS
+
+--[[ ill make some gui for this soon but its late so im gonna go sleep ]]--
+
+--[[ also im gonna port it to the arabic testing game because its funny ]]--
+
+--[[ pls no skid! ]]--

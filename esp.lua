@@ -21,6 +21,7 @@ local bones = {
     {"RightUpperLeg", "RightLowerLeg"},
     {"RightLowerLeg", "RightFoot"}
 }
+--imported from somewhere idk where just credits to them
 
 --// note: makey sure when you are changing the settings you do ESP_SETTINGS.(setting)
 local ESP_SETTINGS = {
@@ -46,7 +47,7 @@ local ESP_SETTINGS = {
     ShowHealth = false,
     ShowDistance = false,
     ShowTracer = false,
-    TracerThickness = 1,
+    TracerThickness = 1, --dont use tracers they're currently broken and im too lazy to fix them
     TracerPosition = "Bottom",
 }
 
@@ -293,8 +294,6 @@ local function updateEsp()
                     else
                         esp.distance.Visible = false
                     end             
-
-                    --[[ tracers are buggy and broken rn just dont use em :pray: ]]--
                     
                     if ESP_SETTINGS.ShowTracer and ESP_SETTINGS.Enabled then
                         local tracerY

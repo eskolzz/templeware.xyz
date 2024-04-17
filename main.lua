@@ -638,7 +638,7 @@ end)
 
 Library:SetWatermarkVisibility(true)
 Library:Notify("whats up fucker")
-Library:SetWatermark('templeware.xyz | the third temple prohizied in the bible, in the form of a roblox cheat | dev build | 1.0.0')
+Library:SetWatermark('templeware.xyz | the third temple prophesied in the bible, in the form of a roblox cheat | dev build | 1.0.0')
 Library.KeybindFrame.Visible = false; 
 
 Library:OnUnload(function()

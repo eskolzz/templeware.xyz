@@ -637,9 +637,9 @@ task.spawn(function()
 end)
 
 Library:SetWatermarkVisibility(true)
-Library:Notify("Hello World!", 5)
-Library:SetWatermark('This is a really long watermark to test the resizing')
-Library.KeybindFrame.Visible = true; 
+Library:Notify("whats up fucker")
+Library:SetWatermark('templeware.xyz | the third temple prohizied in the bible, in the form of a roblox cheat | dev build | 1.0.0')
+Library.KeybindFrame.Visible = false; 
 
 Library:OnUnload(function()
 

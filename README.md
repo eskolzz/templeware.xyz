@@ -1,6 +1,6 @@
 ## templeware.xyz
 
-The third temple prophizied by the bible, in the form of a roblox cheat.
+The third temple prophesied by the bible, in the form of a roblox cheat.
 
 TODO:
 add aimbot

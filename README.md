@@ -14,3 +14,5 @@ fly
 
 game support:
  idk whatever i feel like
+
+ depracated because krampus exit scammed :sob:
